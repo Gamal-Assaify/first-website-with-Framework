@@ -1,0 +1,30 @@
+/* Custom Overrides & Enhancements */
+
+/* Logo image dimensions */
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Primary theme color customization */
+:root {
+    --bs-primary: #006699;
+    --bs-primary-rgb: 0, 102, 153;
+}
+
+.btn-primary {
+    background-color: #006699;
+    border-color: #006699;
+}
+
+.btn-primary:hover {
+    background-color: #004d73;
+    border-color: #004d73;
+}
+
+/* Card subtle border styling */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
