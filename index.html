@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,12 +39,7 @@
             <div class="card-body p-4">
                 <h2 class="card-title text-primary mb-3">The Beginning Story</h2>
                 <p class="lead">We are dedicated to providing support and resources for students who are struggling with their studies. Our program offers personalized guidance, mentorship, and study strategies to help students succeed academically.</p>
-                
-                <p><strong>Motivational Story:</strong> Once upon a time, there was a student named Alex who was struggling with their studies. Alex found it difficult to keep up with the workload and often felt overwhelmed by the pressure of exams and assignments. Despite their best efforts, Alex's grades were slipping, and they began to lose confidence in their abilities. One day, while browsing the internet for resources to help with their studies, Alex came across a program called <em>"Helping Hands for Middelbaar Students"</em>. Intrigued by the name, Alex decided to sign up for the program and see if it could provide the support they needed.</p>
-                <p>Upon joining the program, Alex was paired with a mentor who specialized in their subject areas of struggle. The mentor provided personalized guidance, helping Alex to develop effective study strategies and time management skills. They also offered encouragement and motivation, reminding Alex of their potential and the importance of perseverance.</p>
-                <p>With the support of the program, Alex began to see improvements in their studies. They learned how to break down complex topics into manageable parts and how to approach assignments with a clear plan. The mentor also introduced Alex to study groups, where they could collaborate with peers and gain different perspectives on the material.</p>
-                <p>As the weeks went by, Alex's confidence grew, and their grades started to improve. They felt a renewed sense of purpose and motivation, knowing that they had a support system in place. By the end of the semester, Alex had not only caught up with their studies but had also excelled in their exams, achieving grades they never thought possible.</p>
-                <p class="mb-0">In the end, Alex realized that seeking help was not a sign of weakness but a step towards growth and success. Alex's story serves as an inspiration to other students facing similar struggles, reminding them that with the right support and determination, they too can succeed.</p>
+                <p><strong>Motivational Story:</strong> Once upon a time, there was a student named Alex who was struggling with their studies...</p>
             </div>
         </section>
 
@@ -53,9 +47,7 @@
         <section class="card shadow-sm mb-4">
             <div class="card-body p-4">
                 <h2 class="card-title text-primary mb-3">Our Mission</h2>
-                <p>Our mission is to empower students to reach their full potential by providing them with the necessary tools, resources, and support. We believe that every student deserves the opportunity to succeed academically, regardless of their background or circumstances.</p>
-                <p>We are committed to creating a positive and inclusive learning environment where students feel valued and supported. Our team of dedicated mentors and educators work tirelessly to ensure that each student receives personalized attention and guidance tailored to their unique needs.</p>
-                <p class="mb-0">Through our program, we aim to foster a love for learning, build confidence, and equip students with the skills they need to thrive in their academic pursuits. We believe that by investing in the education and well-being of our students, we can help shape a brighter future for them and for society as a whole.</p>
+                <p>Our mission is to empower students to reach their full potential by providing them with the necessary tools, resources, and support.</p>
             </div>
         </section>
 
@@ -63,20 +55,16 @@
         <section class="card shadow-sm mb-4">
             <div class="card-body p-4">
                 <h2 class="card-title text-primary mb-3">Be a Volunteer</h2>
-                <p>We are always looking for passionate individuals to join our team of volunteers. Whether you are a student, professional, or community member, your contribution can make a significant difference in the lives of our students.</p>
-                
-                <p>As a volunteer, you will have the opportunity to participate in:</p>
                 <ul class="list-group list-group-flush mb-3">
-                    <li class="list-group-item"><strong>Personalized Tutoring:</strong> One-on-one tutoring sessions tailored to the student's specific needs and learning style.</li>
-                    <li class="list-group-item"><strong>Study Groups:</strong> Collaborative study sessions where students can learn from each other and gain different perspectives.</li>
-                    <li class="list-group-item"><strong>Mentorship Programs:</strong> Pairing students with experienced mentors who provide guidance, support, and motivation.</li>
-                    <li class="list-group-item"><strong>Workshops and Seminars:</strong> Interactive workshops on study skills, time management, and exam preparation.</li>
+                    <li class="list-group-item"><strong>Personalized Tutoring:</strong> One-on-one tutoring sessions tailored to student needs.</li>
+                    <li class="list-group-item"><strong>Study Groups:</strong> Collaborative study sessions.</li>
+                    <li class="list-group-item"><strong>Mentorship Programs:</strong> Pairing students with experienced mentors.</li>
+                    <li class="list-group-item"><strong>Workshops and Seminars:</strong> Interactive workshops on study skills.</li>
                 </ul>
-                <p class="mb-0">By volunteering with us, you will make a positive impact on the academic journey of students and help them achieve their goals. <a href="https://www.goodgoodgood.co/articles/volunteer-quotes" target="_blank" class="btn btn-sm btn-outline-primary ms-2">Read More</a></p>
             </div>
         </section>
 
-        <!-- SECTION 4: TABLE -->
+        <!-- SECTION 4: TABLE (Needs Overview) -->
         <section class="card shadow-sm mb-4">
             <div class="card-body p-4">
                 <h2 class="card-title text-primary mb-3">Needs Overview</h2>
@@ -89,27 +77,13 @@
                                 <th scope="col">Numbers of Volunteers Needed</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>School A</td>
-                                <td>500</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>School B</td>
-                                <td>300</td>
-                                <td>8</td>
-                            </tr>
-                            <tr>
-                                <td>School C</td>
-                                <td>400</td>
-                                <td>12</td>
-                            </tr>
+                        <tbody id="needs-table-body">
+                            <!-- Table rows will be dynamically populated and updated via JavaScript -->
                         </tbody>
                         <tfoot class="table-secondary fw-bold">
                             <tr>
                                 <td colspan="2">Total Volunteers Needed</td>
-                                <td>30</td>
+                                <td id="total-volunteers">0</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -117,34 +91,26 @@
             </div>
         </section>
 
-        <!-- SECTION 5: FORM -->
+        <!-- SECTION 5: INPUT FORM TO ADD SCHOOL DATA TO TABLE -->
         <section class="card shadow-sm mb-4">
             <div class="card-body p-4">
-                <h2 class="card-title text-primary mb-4">Volunteer Sign-Up Form</h2>
-                <form>
+                <h2 class="card-title text-primary mb-4">Add School Need to Table</h2>
+                <form id="add-school-form">
                     <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="name" class="form-label fw-semibold">Name:</label>
-                            <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                        <div class="col-md-4">
+                            <label for="schoolName" class="form-label fw-semibold">School Name:</label>
+                            <input type="text" id="schoolName" class="form-control" placeholder="e.g., School D" required>
                         </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label fw-semibold">Email:</label>
-                            <input type="email" id="email" name="email" class="form-control" required placeholder="name@example.com">
+                        <div class="col-md-4">
+                            <label for="studentCount" class="form-label fw-semibold">Number of Students:</label>
+                            <input type="number" id="studentCount" class="form-control" placeholder="e.g., 250" min="1" required>
                         </div>
-                        <div class="col-md-6">
-                            <label for="phone" class="form-label fw-semibold">Phone:</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+31 6 12345678">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="availability" class="form-label fw-semibold">Availability:</label>
-                            <select id="availability" name="availability" class="form-select">
-                                <option value="weekdays">Weekdays</option>
-                                <option value="weekends">Weekends</option>
-                                <option value="evenings">Evenings</option>
-                            </select>
+                        <div class="col-md-4">
+                            <label for="volunteerCount" class="form-label fw-semibold">Volunteers Needed:</label>
+                            <input type="number" id="volunteerCount" class="form-control" placeholder="e.g., 5" min="1" required>
                         </div>
                         <div class="col-12 mt-4">
-                            <button type="submit" class="btn btn-primary px-4">Submit Application</button>
+                            <button type="submit" class="btn btn-primary px-4">Add to Table</button>
                         </div>
                     </div>
                 </form>
@@ -155,14 +121,12 @@
         <section class="card shadow-sm">
             <div class="card-body p-4">
                 <h2 class="card-title text-primary mb-3">Contact Us</h2>
-                <p>If you have any questions or would like to learn more about our program, please feel free to reach out to us. We are here to help and support you on your academic journey.</p>
                 <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><strong>Email:</strong> <a href="mailto:gamal.assaify@gmail.com" class="text-decoration-none">gamal.assaify@gmail.com</a></li>
+                    <li class="mb-2"><strong>Email:</strong> <a href="mailto:gamal.assaify@gmail.com">gamal.assaify@gmail.com</a></li>
                     <li><strong>Phone:</strong> +31 6 86772829</li>
                 </ul>
             </div>
-        </section>
-
+        </section> 
     </main>
 
     <!-- FOOTER -->
@@ -172,7 +136,8 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Bootstrap JS & Main Custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
